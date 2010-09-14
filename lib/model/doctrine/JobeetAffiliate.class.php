@@ -12,4 +12,9 @@
  */
 class JobeetAffiliate extends BaseJobeetAffiliate
 {
+
+    public function toString() {
+        return $this->getUrl();
+    }
+
 }
