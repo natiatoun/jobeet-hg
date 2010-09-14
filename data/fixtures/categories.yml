@@ -1,0 +1,9 @@
+JobeetCategory:
+  programming:
+    name: Programming
+  design:
+    name: Design
+  manager:
+    name: Manager
+  administrator:
+    name: Administrator
