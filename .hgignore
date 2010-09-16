@@ -1,5 +1,5 @@
 cache/
 log/
-config/databases.yml
 lib/vendor/symfony/
 nbproject/
+config/databases.yml
