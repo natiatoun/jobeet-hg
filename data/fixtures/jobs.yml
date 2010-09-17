@@ -19,7 +19,7 @@ JobeetJob:
     is_activated: true
     token: job_sensio_labs
     email: jo@example.com
-    expires_at: '2010-10-10'
+    expires_at: '2010-10-10 00:00:00'
 
   job_extreme_sensio:
     JobeetCategory: design
@@ -44,6 +44,44 @@ JobeetJob:
     is_activated: true
     token: job_extreme_sensio
     email: job@example.com
-    expires_at: '2010-10-10'
+    expires_at: '2010-10-10 00:00:00'
 
+  expired_job:
+    JobeetCategory: design
+    type: part-time
+    company: Extreme Sensio
+    logo: extreme-sensio.gif
+    url: http://www.extreme-sensio.com
+    position: Web Designer
+    location: Paris, France
+    description: |
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+      eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+      enim ad minim veniam, quis nostrud exercitation ullamco laboris
+      nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+      in reprehenderit in.
+      Voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      Excepteur sint occaecat cupidatat non proident, sunt in culpa
+      qui officia deserunt mollit anim id est laborum.
+    how_to_apply: |
+      Send your resume to fabien.potencier [at] sensio.com
+    is_public: true
+    is_activated: true
+    token: job_expired
+    email: job@example.com
+    created_at: '2005-12-01 00:00:00'
 
+<?php for ($i=0; $i<=130; $i++): ?>
+  job_<?php echo $i ?>:
+    JobeetCategory: programming
+    company: Company <?php echo $i. "\n" ?>
+    position: Web Developer
+    location: Paris, France
+    description: Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    how_to_apply: |
+      Send your resume to lorem.ipsum [at] company_<?php echo $i?>.sit
+    is_public: true
+    is_activated: true
+    token: job_<?php echo $i . "\n" ?>
+    email: job@example.com
+<?php endfor ?>
