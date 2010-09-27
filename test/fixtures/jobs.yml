@@ -71,7 +71,7 @@ JobeetJob:
     email: job@example.com
     created_at: '2005-12-01 00:00:00'
 
-<?php for ($i=0; $i<=130; $i++): ?>
+<?php for ($i=100; $i<=130; $i++): ?>
   job_<?php echo $i ?>:
     JobeetCategory: programming
     company: Company <?php echo $i. "\n" ?>
