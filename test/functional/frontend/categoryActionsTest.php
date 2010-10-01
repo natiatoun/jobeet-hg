@@ -29,7 +29,7 @@ $browser->info('1 - The category page')->
         checkElement('.pagination_desc', '/32 jobs/')->
         checkElement('.pagination_desc', '#page 1/2#')->
         end()->
-        click('Next Page')-> // replaced '2' for 'Next Page' cause for some weird reason '2' wasn't passing the test, although the browser shows the link correctly.
+        click('2')->
         with('request')->begin()->
         isParameter('page', 2)->
         end()->

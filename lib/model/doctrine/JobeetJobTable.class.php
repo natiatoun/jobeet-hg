@@ -38,9 +38,18 @@ class JobeetJobTable extends Doctrine_Table {
 
         $q->andWhere($alias . '.expires_at > ?', date('Y-m-d H:i:s', time()))
                 ->addOrderBy($alias . '.created_at DESC')
-                ->andWhere($alias. '.is_activated = ?', 1);
+                ->andWhere($alias . '.is_activated = ?', 1);
 
         return $q;
+    }
+
+    public function cleanup($days) {
+        $q = $this->createQuery('a')
+                        ->delete()
+                        ->andWhere('a.is_activated = ?', 0)
+                        ->andWhere('a.created_at < ?', date('Y-m-d', time() - 86400 * $days));
+
+        return $q->execute();
     }
 
 }
